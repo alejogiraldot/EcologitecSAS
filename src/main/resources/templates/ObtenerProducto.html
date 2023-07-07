@@ -1,0 +1,41 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear producto</title>
+    <link rel="stylesheet" href="Crear.css">
+</head>
+<body>
+    <div class="contenedorlogo">
+
+        <form th:action="@{/BuscarProducto}" method="GET">
+
+            <p>
+
+                Busca un código: <input name="code" type="search" size="10" maxlength="10" th:value="*{code}">
+
+                <button class="guardar" type="submit"> Buscar </button>
+
+            </p>
+
+        </form>
+
+    </div>
+    <div class="contenedorlogo">
+
+        <form th:action="@{/Obtener}" method="GET">
+
+            <p>
+
+                Busca un código: <input name="code" type="search" size="10" maxlength="10" th:value="*{code}">
+
+                <button class="guardar" type="submit"> Buscar Producto </button>
+
+            </p>
+
+        </form>
+
+    </div>
+</body>
+
+</html>

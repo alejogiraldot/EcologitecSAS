@@ -1,0 +1,918 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear producto</title>
+    <link rel="stylesheet" href="Crear.css">
+</head>
+<body>
+    <div class="contenedor">
+        <ul class="slider">
+            <li id="slide1">
+                    <div class="contenedorlogo">
+                        <div class="imagebuscar">
+
+                        </div>
+
+                        <h1>ORDEN DE PRODUCCION GLUTARALDEHIDO AL 2.2% </h1>
+                        <div class="contenedor2">
+                            <p class="contenedor21">CODIGO: FPD-004</p>
+                            <p class="contenedor21">AREA: Producción</p>
+                            <p class="contenedor21">FECHA DE VIGENCIA: 28-06-2017</p>
+                            <p >Pag: 1 de 1</p>
+                        </div>
+                    </div>
+
+                    <div class="contenedor3">
+                        <p >CODIGO DE PRODUCTO: GL0200 </p>
+
+                        <form th:action="@{/Producto}" th:object="${Producto}" method="POST" >
+                            <p>
+                                <input type="text"  th:field="${Producto.code}" id="pelox0">
+                            </p>
+                    </div>
+                    <div class="contenedor4">
+                        <div>
+                            <p >TAMAÑO DE LOTE: 100 LT</p>
+                            <p > PROCEDIMIENTO TEORICO: 100 LT</p>
+                        </div>
+                        <div>
+                            <p >PRESENTACIO : 1 LT </p>
+                            <p >RENDIMIENTO OBTENIDO:</p>
+                        </div>
+                    </div>
+                    <div class="listainer">
+                        <div>
+                            <h3 >CODIGO</h3>
+                            <p >0000</p>
+                            <p >GL0100</p>
+                            <p >PR0101</p>
+                            <p >FM0102</p>
+                            <p >BM0103</p>
+                            <p>CV0104</p>
+                        </div>
+                        <div>
+                            <h3 >MATERIA PRIMA</h3>
+                            <p >AGUA</p>
+                            <p >GLUTARALDEHIDO</p>
+                            <p >PROPILENGLICOL</p>
+                            <p >FOSFATO MONOSODICO</p>
+                            <p  >BRISA MARINA</p>
+                            <p>COLOR VERDE</p>
+                        </div>
+                        <div>
+                            <h3>CONCENTRACION (%)</h3>
+                            <p>
+                                <input type="text" id="pelox7" th:field="${Producto.conwater}">
+                            </p>
+                            <p>
+                                <input type="text" id="pelox8" th:field="${Producto.conglutar}">
+                            </p>
+                            <p>
+                                <input type="text" id="pelox9" th:field="${Producto.conpropile}">
+                            </p>
+                            <p>
+                                <input type="text" id="pelox10" th:field="${Producto.conbrisam}">
+                            </p>
+                            <p>
+                                <input type="text" id="pelox11" th:field="${Producto.confosfato}">
+                            </p>
+                            <p>
+                                <input type="text" id="pelox12" th:field="${Producto.congreen}">
+                            </p>
+                        </div>
+                        <div >
+                            <h3>No LOTE</h3>
+                            <p>
+                                <input type="text" id="pelox13" th:field="${Producto.lotewater}">
+                            </p>
+                            <p>
+                                <input type="text" id="pelox14" th:field="${Producto.loteglutar}">
+                            </p>
+                            <p>
+                                <input type="text" id="pelox15" th:field="${Producto.lotepropile}">
+                            </p>
+                            <p>
+                                <input type="text" id="pelox16" th:field="${Producto.lotebrisam}">
+                            </p>
+                            <p>
+                                <input type="text"  id="pelox17" th:field="${Producto.lotefosfato}">
+                            </p>
+                            <p>
+                                <input type="text"  id="pelox18" th:field="${Producto.lotegreen}">
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3>No ANALISIS</h3>
+                            <p>
+                                <input type="text" th:field="${Producto.anaWater}">
+                            </p>
+                            <p>
+                                <input type="text" th:field="${Producto.anaGlutar}">
+                            </p>
+                            <p>
+                                <input type="text" th:field="${Producto.anaPropile}">
+                            </p>
+                            <p>
+                                <input type="text" th:field="${Producto.anaBrisam}">
+                            </p>
+                            <p>
+                                <input type="text" th:field="${Producto.anaFosfato}">
+                            </p>
+                            <p>
+                                <input type="text" th:field="${Producto.anaGreen}">
+                            </p>
+                        </div>
+                        <div>
+                            <h3>CANTIDAD TEORICA (KG)</h3>
+                            <p>
+                                <input type="text" id="pelox19" th:field="${Producto.teoWater}">
+                            </p>
+                            <p>
+                                <input type="text" id="pelox20" th:field="${Producto.teoGlutar}">
+                            </p>
+                            <p>
+                                <input type="text" id="pelox21" th:field="${Producto.teoPropile}">
+                            </p>
+                            <p>
+                                <input type="text" id="pelox22" th:field="${Producto.teoBrisam}">
+                            </p>
+                            <p>
+                                <input type="text" id="pelox23" th:field="${Producto.teoFosfato}">
+                            </p>
+                            <p>
+                                <input type="text" id="pelox24" th:field="${Producto.teoGreen}">
+                            </p>
+                        </div>
+                        <div>
+                            <h3>CANTIDAD PESADA</h3>
+                                    <input type="text" id="pelox1" th:field="${Producto.Water}"  >
+                                <p>
+                                    <input type="text" id="pelox2" th:field="${Producto.Glutar}"  >
+                                </p>
+                                <p  >
+                                    <input type="text"  id="pelox3" th:field="${Producto.Propile}" >
+                                </p>
+                                <p  >
+                                    <input type="text"  id="pelox4" th:field="${Producto.Brisam}"  >
+                                </p>
+                                <p  >
+                                    <input type="text" id="pelox5"  th:field="${Producto.Fosfato}" >
+                                </p>
+                                <p >
+                                    <input type="text" id="pelox6" th:field="${Producto.Green}">
+                                </p>
+
+
+                        </div>
+
+
+                    </div>
+                        <div class="list-1" >
+                            <div class="codigo">
+                                <h3>CODIGO</h3>
+                                <p>GL0200</p>
+                            </div>
+                            <div class="producto-acondicionado">
+                                <h3>PRODUCTO ACONDICIONADO</h3>
+                                <p>GLUTARALDEHIDO 2.2%</p>
+                            </div>
+                            <div class="cantidad-t">
+                                <h3>CANTIDAD TEORICA</h3>
+                                <p>100 UNIDADES</p>
+                            </div>
+                            <div class="No LOTE">
+                                <h3>No LOTE</h3>
+                                <p id="peloxx40">
+                                </p>
+                            </div>
+                            <div class="cantidad-r">
+                                <h3>CANTIDAD REAL</h3>
+                                <p>
+                                    <input type="text" th:field="${Producto.cantiReal}">
+                                </p>
+                            </div>
+                            <div class="cantidad faltante">
+                                <h3>CANTIDAD FALTANTE</h3>
+                                <p>
+                                    <input type="text" th:field="${Producto.cantiFalta}">
+                                </p>
+                            </div>
+                            <div class="rendimiento">
+                                <h3>RENDIMIENTO</h3>
+                                <p>
+                                    <input type="text" th:field="${Producto.rendimiento}">
+                                </p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="contenedor5">
+                            <div>
+                                <p>HORA INICIAL:</p>
+                                <p>
+                                    <input type="text" th:field="${Producto.horaIni}">
+                                </p>
+                                <p>HORA Y DIA DE ACONDICIONAMIENTO:</p>
+                                <p>
+                                    <input type="text" th:field="${Producto.diaAco}">
+                                </p>
+                            </div>
+                            <div>
+                                <p>HORA FINALIZADA: </p>
+                                <p>
+                                    <input type="text" th:field="${Producto.horFini}">
+                                </p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="contenedor6">
+                            <div>
+                                <p>REVISADO POR: </p>
+                                <p>
+                                    <input type="text" th:field="${Producto.Revisado}">
+                                </p>
+                            </div>
+                            <div>
+                                <p>RESPONSABLE: </p>
+                                <p>
+                                    <input type="text" th:field="${Producto.Responsable}">
+                                </p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="contenedor7">
+                            <div>
+                                <p>JEFE DE PRODUCCION: LUIS FERNANDO VELASQUEZ MORA</p>
+                            </div>
+                            <div>
+                                <p>DIRECTOR TECNICO: RUBEN DARIO OROZCO </p>
+                            </div>
+                            <div>
+                                <p>GERENTE: LUIS FERNANDO VELASQUEZ MORA</p>
+                            </div>
+                        </div>
+
+                </li>
+            <li id="slide2">
+                <div>
+                    <div class="contenedorlogo">
+                        <div class="image">
+
+                        </div>
+
+                        <h1>PROTOCOLO DE PESAJE </h1>
+                        <div class="contenedor2">
+                            <p class="contenedor21">CODIGO: FPD-005</p>
+                            <p class="contenedor21">AREA: Producción</p>
+                            <p class="contenedor21">FECHA DE VIGENCIA: 28-06-2017</p>
+                            <p >Pag: 1 de 1</p>
+                        </div>
+                    </div>
+                    <p>1. Despeje de linea</p>
+                    <div class="contenedorlogo">
+                        <div class=>
+                            <p class="contenedor21">Producto Actual: Glutaraldehido 2,2%</p>
+                            <p class="contenedor21">Producto Anterior: Glutaraldehido 2,2%</p>
+                            <p class="contenedor21">Área: Dispositivos</p>
+                            <p class="contenedor21">Fecha: 19/11/2021</p>
+                            <p class="contenedor21">Verificado por: Adrián Velasquez</p>
+                        </div>
+                        <div class>
+                            <p> Lote: </p>
+                            <p id="peloxx30"></p>
+                            <p class="contenedor21">Linea: Desinfección</p>
+                            <p>Realizado por: </p>
+                                <input class="contenedor21" th:field="${Producto.RealizadoPor}">
+
+
+
+                        </div>
+                    </div>
+                    <br>
+                    <div class="contenedorlogo">
+                        <div>
+                            <h3>DESCRIPCION</h3>
+                            <p>El area y los equipos se encuentras limpios y desinfectados</p>
+                            <p>Los procedimientos del área y equipos son conocidos por el operario</p>
+                            <p>Los tableros y rótulos están marcados con el producto actual</p>
+                            <p>Área y equipos libres de materias primas o insumos del producto anterior</p>
+                            <p>Las puertas de la esclusa permanecen cerradas</p>
+                            <p>El operario tiene completo y bien puesto su uniforme, tiene guantes y tapabocas</p>
+                            <p>Está la documentacion requerida para el proceso en el área</p>
+                            <p>Las balanzas están calibradas</p>
+                            <p>Visto bueno para el despeje de la linea se puede dar inicio al proceso</p>
+                            <h3>SE PUEDE DAR INICIO AL PROCESO</h3>
+
+                        </div>
+
+                        <div>
+                            <h3>CUMPLE</h3>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value1}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value2}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value3}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value4}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value5}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value6}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value7}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value8}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+
+                        </div>
+                    </div>
+                    <br>
+                    <div class="contenedorlogo">
+                        <div>
+                            <h3 >CODIGO</h3>
+                            <p >0000</p>
+                            <p >GL0100</p>
+                            <p >PR0101</p>
+                            <p >FM0102</p>
+                            <p >BM0103</p>
+                            <p>CV0104</p>
+                        </div>
+                        <div>
+                            <h3 >MATERIA PRIMA</h3>
+                            <p >AGUA</p>
+                            <p >GLUTARALDEHIDO</p>
+                            <p >PROPILENGLICOL</p>
+                            <p >FOSFATO MONOSODICO</p>
+                            <p  >BRISA MARINA</p>
+                            <p>COLOR VERDE</p>
+                        </div>
+                        <div>
+                            <h3>CANTIDAD TEORICA (KG)</h3>
+                            <p id="peloxx18"></p>
+                            <p id="peloxx19"></p>
+                            <p id="peloxx20"></p>
+                            <p id="peloxx21"></p>
+                            <p id="peloxx22"></p>
+                            <p id="peloxx23"></p>
+                        </div>
+                        <div>
+                            <h3>CANTIDAD PESADA (KG)</h3>
+                            <p id="pelox"></p>
+                            <p id="peloxx1"></p>
+                            <p id="peloxx2"></p>
+                            <p id="peloxx3"></p>
+                            <p id="peloxx4"></p>
+                            <p id="peloxx5"></p>
+                        </div>
+                        <div>
+                            <h3>CONCENTRACION (%)</h3>
+                            <p id="peloxx6"></p>
+                            <p id="peloxx7"></p>
+                            <p id="peloxx8"></p>
+                            <p id="peloxx9"></p>
+                            <p id="peloxx10"></p>
+                            <p id="peloxx11"></p>
+                        </div>
+                        <div >
+                            <h3 >No LOTE</h3>
+                            <p id="peloxx12"></p>
+                            <p id="peloxx13"></p>
+                            <p id="peloxx14"></p>
+                            <p id="peloxx15"></p>
+                            <p id="peloxx16"></p>
+                            <p id="peloxx17"></p>
+                        </div>
+                        <div >
+                            <h3>PESADO POR</h3>
+                            <p>
+                                <input type="text" id="pelox25" th:field="${Producto.PesadoPor}">
+                            </p>
+
+                            <p>
+                                <p type="text" id="peloxx24" >
+                            </p>
+
+                            <p>
+                                <p type="text" id="peloxx25" >
+                            </p>
+                            <p>
+                                <p type="text" id="peloxx26" >
+                            </p>
+                            <p>
+                                <p type="text" id="peloxx27">
+                            </p>
+                            <p>
+                                <p type="text" id="peloxx28">
+                            </p>
+                        </div>
+                        <div >
+                            <h3>VERIFICADO POR </h3>
+                            <p>
+                                <input type="text" th:field="${Producto.VerificadoPor}" id="pelox26">
+                            </p>
+                            <p>
+                                <p type="text" id="peloxx29" >
+                            </p>
+                            <p>
+                                <p type="text" id="peloxx30">
+                            </p>
+                            <p>
+                                <p type="text" id="peloxx31">
+                            </p>
+                            <p>
+                                <p type="text" id="peloxx32">
+                            </p>
+                            <p>
+                                <p type="text" id="peloxx33">
+                            </p>
+                            <p>
+                            <p type="text" id="peloxx34">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li id="slide3">
+
+                <div>
+                    <div class="contenedorlogo">
+                        <div class="image">
+
+                        </div>
+
+                        <h1>PROTOCOLO DE FABRICACIÓN </h1>
+                        <div class="contenedor2">
+                            <p class="contenedor21">CODIGO: FPD-007</p>
+                            <p class="contenedor21">AREA: Producción</p>
+                            <p class="contenedor21">FECHA DE VIGENCIA: 28-06-2017</p>
+                            <p >Pag: 1 de 1</p>
+                        </div>
+                    </div>
+                    <p>1. Despeje de linea</p>
+                    <div class="contenedorlogo">
+                        <div >
+                            <p class="contenedor21">Producto Actual: Glutaraldehido 2,2%</p>
+                            <p class="contenedor21">Realizado por: Luis Fdo V</p>
+                            <p class="contenedor21">Fecha: 19/11/21</p>
+                        </div>
+                        <div >
+                            <p>Lote:</p>
+                            <p id="peloxx41"></p>
+                            <p class="contenedor21">Verificado por: Adrián V </p>
+                        </div>
+                    </div>
+                    <p>2. Proceso de fabricacion</p>
+                    <div class="contenedorlogo">
+                        <div>
+                            <h3>DESCRIPCION</h3>
+                            <p>El area y los equipos se encuentras limpios y desinfectados</p>
+                            <p>Los procedimientos del área y equipos son conocidos por el operario</p>
+                            <p>Los tableros y rótulos están marcados con el producto actual</p>
+                            <p>Área y equipos libres de materias primas o insumos del producto anterior</p>
+                            <p>Las puertas de la esclusa permanecen cerradas</p>
+                            <p>El operario tiene completo y bien puesto su uniforme, tiene guantes y tapabocas</p>
+                            <p>Está la documentacion requerida para el proceso en el área</p>
+                            <p>Las balanzas están calibradas</p>
+                            <p>Visto bueno para el despeje de la linea se puede dar inicio al proceso</p>
+                            <h3>SE PUEDE DAR INICIO AL PROCESO</h3>
+                            <br>
+                            <br>
+                            <br>
+
+                        </div>
+                        <div>
+                            <h3>CUMPLE</h3>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value9}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value10}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value11}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value12}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value13}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value14}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value15}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value16}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value17}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                        </div>
+
+
+                    </div>
+                    <br>
+                    <br>
+                    <div class="contenedorlogo">
+                        <div>
+                            <h3>PASO</h3>
+                            <p>1</p>
+                            <p>2</p>
+                            <p>3</p>
+                            <p>4</p>
+                            <p>5</p>
+
+                        </div>
+                        <div>
+                            <h3>ACTIVIDAD</h3>
+                            <p>Pesar el agua para dar inicio al proceso</p>
+                            <p>Pesar el fosfator y agitar 10 min</p>
+                            <p>Pesar el grlutaraldehido, adicionar y agita 10 min</p>
+                            <p>Pesar el propilenglicol y la fragancia, mezclar y adicionar al proceso agitar 10 min</p>
+                            <p>Prepar el colorante al 1% y adicionar al sistema, mezclar 5 min</p>
+                        </div>
+                    </div>
+                    <br>
+                    <p>3.Control en proceso</p>
+                    <br>
+                    <div class="contenedorlogo">
+                        <div>
+                            <p>Observacion: <textarea th:field="${Producto.Obser}" ></textarea></p>
+
+                            <p>Hora de finalización: <input></p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="contenedorlogo">
+                        <div>
+                            <p>Fecha de análisis: <input th:field="${Producto.FechaAna}"></p>
+                            <p>Cantidad : <input th:field="${Producto.Canti}"></p>
+
+                        </div>
+                    </div>
+                    <br>
+                    <div class="contenedorlogo">
+                        <div>
+                            <h3>ENSAYO</h3>
+                            <p>OLOR</p>
+                            <p>COLOR</p>
+                            <p>DENSIDAD</p>
+                            <p>pH</p>
+                        </div>
+                        <div>
+                            <h3>ESPECIFICACION</h3>
+                            <p><input type="text" th:field="${Producto.espeolor}"></p>
+                            <p><input type="text" th:field="${Producto.especolor}"></p>
+                            <p><input type="text" th:field="${Producto.espedensi}"></p>
+                            <p><input type="text" th:field="${Producto.espeph}"></p>
+                        </div>
+                        <div>
+                            <h3>METODO</h3>
+                            <p><input type="text" th:field="${Producto.metoolor}"></p>
+                            <p><input type="text" th:field="${Producto.metocolor}"></p>
+                            <p><input type="text" th:field="${Producto.metodensi}"></p>
+                            <p><input type="text" th:field="${Producto.metoph}"></p>
+                        </div>
+                        <div>
+                            <h3>RESULTADO</h3>
+                            <p ><input type="text" th:field="${Producto.olor}"></p>
+                            <p><input type="text" th:field="${Producto.color}"></p>
+                            <p><input type="text" th:field="${Producto.densidad}"></p>
+                            <p><input type="text" th:field="${Producto.ph}"></p>
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="contenedor44">
+                        <h3> Se aprueba envasado :</h3>
+                        <p>
+                            <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value30}"> SI
+                            <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                        </p>
+
+                        <p>Analizado por: <input th:field="${Producto.AnalisadoPor}"></p>
+                        <p>Observaciones: <textarea th:field="${Producto.Obser1}"></textarea> </p>
+
+                    </div>
+
+                </div>
+            </li>
+            <li id="slide4">
+                <div>
+                    <div class="contenedorlogo">
+                        <div class="image">
+
+                        </div>
+
+                        <h1>PROTOCOLO DE ENVASADO Y ACONDICIONAMIENTO</h1>
+                        <div class="contenedor2">
+                            <p class="">CODIGO: FPD-007</p>
+                            <p class="">AREA: Producción</p>
+                            <p class="">FECHA DE VIGENCIA: 28-06-2017</p>
+                            <p >Pag: 1 de 1</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="contenedorlogo">
+                        <div >
+                            <p class="">Producto Actual: Glutaraldehido 2,2%</p>
+                            <p class="">Fecha inicio: <input type="text" th:field="${Producto.fechaini1}"></p>
+                            <p class="">Emitido por: <input type="text" th:field="${Producto.emitido}"></p>
+                        </div>
+                        <div >
+                            <p>Lote:</p>
+                            <p class="" id="peloxx44"></p>
+                            <p class="">Hora incio: <input type="text" th:field="${Producto.horaini1}"></p>
+                            <p class="">Fecha final: <input type="text" th:field="${Producto.horafini3}"></p>
+                        </div>
+                        <div >
+                            <p class="">Prestaciones Comerciales: <input type="text" th:field="${Producto.presentacion}"></p>
+                            <p class="">Unidades por prestación: <input type="text" th:field="${Producto.unidades}"></p>
+                            <p class="">Fecha final: <input type="text" th:field="${Producto.fechafini2}"></p>
+                        </div>
+                        <div >
+                            <p class="">Hora final: <input type="text" th:field="${Producto.horafini2}"></p>
+                        </div>
+
+
+                    </div>
+                    <p>1. Despeje de linea envasado</p>
+                    <div class="contenedorlogo">
+                        <div>
+                            <p> Producto Actual: GLUTARALDEHIDO 2.2%</p>
+                            <p> Realizado por: <input type="text" th:field="${Producto.realizpor}"></p>
+                            <p> Fecha: <input type="text" th:field="${Producto.fecha}"></p>
+                        </div>
+
+
+                        <div>
+                            <p>Lote:</p>
+                            <p id="peloxx42" ></p>
+                            <p>Verificado por: <input type="text" th:field="${Producto.veripor}"></p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="contenedorlogo">
+                        <div>
+                            <h3>DESCRIPCION</h3>
+                            <p>El area y los equipos se encuentras limpios y desinfectados</p>
+                            <p>Los procedimientos del área y equipos son conocidos por el operario</p>
+                            <p>Los tableros y rótulos están marcados con el producto actual</p>
+                            <p>Área y equipos libres de materias primas o insumos del producto anterior</p>
+                            <p>Las puertas de la esclusa permanecen cerradas</p>
+                            <p>El operario tiene completo y bien puesto su uniforme, tiene guantes y tapabocas</p>
+                            <p>Se tiene disponible los sistemas de apoyo (Agua, Vapor, Aire,etc)</p>
+                            <p>Visto bueno para el despeje de linea se puede dar inicio al proceso</p>
+                        </div>
+                        <div>
+                            <h3>CUMPLE</h3>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value18}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value19}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value20}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value21}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value22}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value23}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value24}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value25}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                            <p>
+                                <input type="checkbox" id="check1" name="check1" onchange="verifica_seleccion(this)" value="Check1" th:field="${Producto.Value26}"> SI
+                                <input type="checkbox" id="check2" name="check2" onchange="verifica_seleccion(this)" value="Check2" > NO
+                            </p>
+                        </div>
+                    </div>
+
+            </li>
+            <li id="slide5">
+                <div>
+                    <div class="contenedorlogo">
+                        <div class="image">
+
+                        </div>
+
+                        <h1>PROTOCOLO DE ENVASADO Y ACONDICIONAMIENTO</h1>
+                        <div class="contenedor2">
+                            <p class="contenedor21">CODIGO: FPD-009</p>
+                            <p class="contenedor21">AREA: Producción</p>
+                            <p class="contenedor21">FECHA DE VIGENCIA: 28-06-2017</p>
+                            <p >Pag: 2 de 2</p>
+                        </div>
+                    </div>
+                    <br>
+                    <p>2. Control en proceso</p>
+                    <div class="contenedorlogo">
+                        <div>
+                            <p>Producto: GLUTARALDEHIDO</p>
+                            <p> No Lote: </p>
+                            <p id="peloxx43"></p>
+                        </div>
+                        <div>
+                            <p></p>
+                            <p> Cantidad: <input th:field="${Producto.cantidad1}"></p>
+                        </div>
+                        <div>
+                            <p>Fecha: <input th:field="${Producto.fecha2}"></p>
+                            <p>Presentacion: <input th:field="${Producto.presentacion1}"></p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="contenedorlogo">
+                        <div>
+                            <p>Control: <input th:field="${Producto.control}"></p>
+                            <p>Especificación: <input th:field="${Producto.especificacion1}"></p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="contenedorlogo">
+                        <div>
+                            <h3>Numero</h3>
+                            <p>1</p>
+                            <p>2</p>
+                            <p>3</p>
+                            <p>4</p>
+                            <p>5</p>
+                            <p>6</p>
+                        </div>
+                        <div>
+                            <h3>Medida</h3>
+                            <p>
+                                <input th:field="${Producto.medida1}">
+                            </p>
+                            <p>
+                                <input th:field="${Producto.medida2}">
+                            </p>
+                            <p>
+                                <input th:field="${Producto.medida3}">
+                            </p>
+                            <p>
+                                <input th:field="${Producto.medida4}">
+                            </p>
+                            <p>
+                                <input th:field="${Producto.medida5}">
+                            </p>
+                            <p>
+                                <input th:field="${Producto.medida6}">
+                            </p>
+
+                        </div>
+                        <div>
+                            <h3>Hora</h3>
+                            <p>
+                                <input th:field="${Producto.hor1}">
+                            </p>
+                            <p>
+                                <input th:field="${Producto.hor2}">
+                            </p>
+                            <p>
+                                <input th:field="${Producto.hor3}">
+                            </p>
+                            <p>
+                                <input th:field="${Producto.hor4}">
+                            </p>
+                            <p>
+                                <input th:field="${Producto.hor5}">
+                            </p>
+                            <p>
+                                <input th:field="${Producto.hor6}">
+                            </p>
+                        </div>
+                        <div>
+                            <h3>Realizado por</h3>
+                            <p>
+                                <input th:field="${Producto.reali1}">
+                            </p>
+                            <p>
+                                <input th:field="${Producto.reali2}">
+                            </p>
+                            <p>
+                                <input th:field="${Producto.reali3}">
+                            </p>
+                            <p>
+                                <input th:field="${Producto.reali4}">
+                            </p>
+                            <p>
+                                <input th:field="${Producto.reali5}">
+                            </p>
+                            <p>
+                                <input th:field="${Producto.reali6}">
+                            </p>
+                        </div>
+                    </div>
+                    <p> Promedio: <input th:field="${Producto.prome}"></p>
+                    <h3>LIQUIDACION ENVASADO</h3>
+                    <div class="contenedorlogo">
+                            <p>No personas: <input th:field="${Producto.noper}"></p>
+                            <p>Hora Inicio: <input th:field="${Producto.horini}"></p>
+                            <p>Hora Final: <input th:field="${Producto.horfin}"></p>
+                            <p>No Unidades Envasadas: <input th:field="${Producto.noenva}"></p>
+                            <p>Tapas Defectuosas: <input th:field="${Producto.tapasdefe}"></p>
+                            <p>Envases Defectuosos: <input th:field="${Producto.envadefe}"></p>
+                            <p>Muestras de calidad: <input th:field="${Producto.muestras}"></p>
+
+                    </div>
+                    <h3>LIQUIDACION ACONDICIONAMIENTO</h3>
+                    <div class="contenedorlogo">
+                        <p>No personas: <input th:field="${Producto.noper1}"></p>
+                        <p>Hora Inicio:<input th:field="${Producto.horini1}"></p>
+                        <p>Hora Termino: <input th:field="${Producto.horfin1}"></p>
+                        <p>No Unidades Acondicionadas: <input th:field="${Producto.nouni}"></p>
+                        <p>No cajas defectuosas: <input th:field="${Producto.cajasdefe}"></p>
+                        <p>No etiquetas defectuosas: <input th:field="${Producto.etidefe}"></p>
+                        <p>Muestras de calidad: <input th:field="${Producto.muestras1}"></p>
+                        <p>Material sobrante: <input th:field="${Producto.materialsobra}"></p>
+                    </div>
+                    <br>
+                    <h3>Verificación de codificado</h3>
+                    <div class="contenedor44">
+                        <p>Lote:</p>
+                        <p id="peloxx11"></p>
+                        <p>Autorizado por: <input th:field="${Producto.autoriza}"></p>
+                    </div>
+            </li>
+        </ul>
+
+        <ul class="menu">
+            <li>
+                <a href="#slide1">1</a>
+            </li>
+            <li>
+                <a href="#slide2">2</a>
+            </li>
+            <li>
+                <a href="#slide3">3</a>
+            </li>
+            <li>
+                <a href="#slide4">4</a>
+            </li>
+            <li>
+                <a href="#slide5">5</a>
+            </li>
+        </ul>
+
+        <div class="button">
+            <button class="guardar" type="submit"> Guardar </button>
+        </div>
+
+        </form>
+    </div>
+
+
+</body>
+<script src="Crear.js"></script>
+</html>

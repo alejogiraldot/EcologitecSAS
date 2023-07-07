@@ -1,0 +1,192 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear producto</title>
+    <link rel="stylesheet" href="Crear.css">
+</head>
+<body>
+<div>
+    <div class="imagecontain">
+        <p class="imagebuscar">
+
+        </p>
+    </div>
+    <div class="eco">
+        <div>
+            <H3 >Nombre del cliente </H3>
+            <H3> Ecologitec</H3>
+        </div>
+        <div>
+            <H3>Direccion</H3>
+            <H3>Cra 54a #63a66</H3>
+        </div>
+
+    </div>
+    <br>
+    <div class="eco">
+        <div>
+            <h3> Nombre de la muestra</h3>
+            <h3> Glutalradehido </h3>
+        </div>
+
+    </div>
+    <br>
+    <div class="eco">
+        <div>
+            <h3> Descripcion</h3>
+            <h3> Producto terminado</h3>
+        </div>
+        <div>
+            <h3> Cantidad fabricada</h3>
+            <h3> </h3>
+        </div>
+        <div th:each="Producto: ${Producto}" >
+            <h3> No de lote: </h3>
+
+            <h3 th:text="${Producto.code}"> </h3>
+
+
+        </div>
+    </div>
+    <br>
+    <div class="eco">
+        <div>
+            <h3> Fecha de Fabricación</h3>
+            <h3> </h3>
+        </div>
+        <div>
+            <h3> Fecha de Vencimiento</h3>
+            <h3> </h3>
+        </div>
+
+    </div>
+    <br>
+    <div class="eco">
+        <div>
+            <h3> Fecha de analisis</h3>
+            <h3> </h3>
+        </div>
+
+    </div>
+    <br>
+    <div class="eco">
+        <div>
+            <h3> Especificaciones </h3>
+            <h3> </h3>
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="eco">
+            <div  style="padding-left: 25px" class="center">
+                <h3> No </h3>
+                <h3> 1 </h3>
+            </div>
+            <div style="padding-left: 50px" class="center"  >
+                <H3  >Ensayo</H3>
+                <p> Color</p>
+
+            </div>
+            <div class="center" style="padding-left: 60px">
+                <h3> Especificacion </h3>
+                <p th:text="${Producto.especolor}"></p>
+            </div>
+            <div class="center">
+                <H3>Metodo</H3>
+                <p th:text="${Producto.metocolor}"> </p>
+            </div>
+            <div>
+                <h3> Resultado</h3>
+                <p th:text="${Producto.color}"> </p>
+            </div>
+
+
+    </div>
+    <br>
+    <div class="eco">
+        <div class="center" style="padding-left: 30px">
+            <h3> No </h3>
+            <h3> 1 </h3>
+        </div>
+        <div class="center" style="padding-left: 60px">
+            <H3 >Ensayo</H3>
+            <p> Olor</p>
+
+        </div>
+        <div class="center" style="padding-left: 50px" >
+            <h3> Especificacion </h3>
+            <p th:text="${Producto.espeolor}"> </p>
+        </div>
+        <div class="center">
+            <H3>Metodo</H3>
+            <p th:text="${Producto.metocolor}"> </p>
+        </div>
+        <div class="center">
+            <h3> Resultado</h3>
+            <p th:text="${Producto.olor}" > </p>
+        </div>
+
+
+    </div>
+    <br>
+    <div class="eco" style="padding-left: 5px">
+        <div class="center">
+            <h3> No </h3>
+            <h3> 1 </h3>
+        </div>
+        <div class="center" style="padding-left: 20px">
+            <H3>Ensayo</H3>
+            <p> Densidad</p>
+
+        </div>
+        <div style="padding-left: 40px" class="center">
+            <h3> Especificacion </h3>
+            <p th:text="${Producto.espedensi}"> </p>
+        </div>
+        <div class="center">
+            <H3>Metodo</H3>
+            <p th:text="${Producto.metodensi}"> </p>
+        </div>
+        <div class="center">
+            <h3> Resultado</h3>
+            <p th:text="${Producto.densidad}"> </p>
+        </div>
+
+
+    </div>
+    <br>
+    <div class="eco">
+        <div class="center">
+            <h3> No </h3>
+            <h3> 1 </h3>
+        </div >
+        <div class="center" style="padding-left: 30px">
+            <H3>Ensayo</H3>
+            <p> pH</p>
+
+        </div>
+        <div class="center" style="padding-left: 40px">
+            <h3 > Especificacion </h3>
+            <p th:text="${Producto.espeph}"> </p>
+        </div>
+        <div class="center">
+            <H3>Metodo</H3>
+            <p th:text="${Producto.metoph}"> </p>
+        </div>
+        <div class="center">
+            <h3> Resultado</h3>
+            <p th:text="${Producto.ph}"> </p>
+        </div>
+
+
+    </div>
+
+
+
+</div>
+</body>
+
+</html>

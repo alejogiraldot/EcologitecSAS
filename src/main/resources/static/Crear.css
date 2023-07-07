@@ -1,0 +1,155 @@
+.contenedorlogo{
+    display: flex;
+    align-items: center;
+    height:vw;
+    justify-content: space-between;
+    border: 1px solid #000;
+}
+.contenedor2{
+    display: flex;
+    flex-direction: column;
+}
+.contenedor21{
+    border-bottom: 1px solid #000;
+}
+.contenedor22{
+    border-left: 1px solid #000;
+}
+
+.contenedor6,.contenedor7, .contenedor5,.contenedor4, .contenedor3{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    border: 1px solid #000;
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid #000;
+}
+.list-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid #000;
+}
+.image{
+    background-image: url("/Ecologitec.png");
+    height: 200px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-right: 1px solid #000;
+}
+.listainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contenedor{
+    background-color:white;
+}
+ul, li{
+    list-style: none;
+}
+
+ul.slider{
+    position: relative;
+
+}
+.slider{
+    margin: 0px;
+    padding: 0px;
+}
+
+ul.slider li{
+    display: none;
+
+}
+
+ul.slider li:target{
+    display: block;
+}
+.menu{
+    display: flex;
+    justify-content:center;
+}
+.menu li{
+    display: inline-block;
+    text-align: center;
+}
+
+ul.slider li:has(:target) li:first-child{
+    background-color:red;
+}
+.menu li a {
+     display: inline-block;
+     color: white;
+     text-decoration: none;
+     background-color: grey;
+     padding: 10px;
+     width: 20px;
+     height: 20px;
+     font-size: 20px;
+     border-radius: 100%;
+ }
+
+ .menu li {
+     display: inline-block;
+     text-align: center;
+ }
+
+.contenedor44{
+    border: 1px solid #000;
+}
+.imagebuscar{
+    background-image: url("/Ecologitec.png");
+    height: 300px;
+    width: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.imagecontain{
+    display: flex;
+    flex-direction:column;
+    justify-items:center;
+    align-items: center;
+}
+
+.eco{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #000;
+    br
+}
+
+.eco{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #000;
+    br
+}
+
+.center{
+    flex-direction:column;
+    display: flex;
+    justify-content: center;
+    justify-items:center;
+    align-items: center;
+
+}
+
+.center2{
+    flex-direction:column;
+    display: flex;
+    justify-content: center;
+    justify-items:center;
+    align-items: center;
+}
+
